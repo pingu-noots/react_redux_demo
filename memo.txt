@@ -1,0 +1,17 @@
+export const increment = () => ({
+    type: 'INCREMENT'
+})
+
+と
+
+export const increment = () => {
+    return {
+        type: 'INCREMENT'
+    }
+}
+
+は同義。
+
+const func = () => { return foo }
+const func = () => (foo)
+のようにreturnを省略して書くときには ()で囲んで書けばいい
